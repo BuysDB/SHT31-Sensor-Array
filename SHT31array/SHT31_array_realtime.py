@@ -27,5 +27,5 @@ def read_all_temperature_humidity(sht, TCA9548A, N_SHTs):
     return [read_sht(i)   for i in range(N_SHTs)]
 
 while True:
-    print('\t'.join(  [ str(hum)  for temp,hum in read_all_temperature_humidity(sht, TCA9548A, N_SHTs)]  ), end="")
+    print('\t'.join(  [ str(hum)  for temp,hum in read_all_temperature_humidity(sht, TCA9548A, N_SHTs)]  ))
     sys.stdout.flush()
