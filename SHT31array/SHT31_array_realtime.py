@@ -10,6 +10,8 @@ import argparse
 argparser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter, description="Generate data stream from SHT31 sensor array")
 argparser.add_argument('-n', help="Amount of SHT31 sensors", type=int, default=8)
 argparser.add_argument('-dt', help="datatype (0 : temp,1 : hum) ", type=int, default=0)
+argparser.add_argument('-s', help="waiting time", type=float, default=0.010)
+
 args = argparser.parse_args()
 if args.dt not in [0,1]:
     raise ValueError("-dt has to be either 0 or 1")
@@ -32,7 +34,7 @@ def read_all_temperature_humidity(sht, TCA9548A, N_SHTs):
     for i in range(N_SHTs):
         select_sht(i)
         sht.request_readout()
-    time.sleep(0.015)
+    time.sleep(args.s)
     return [read_sht(i)   for i in range(N_SHTs)]
 
 while True:
