@@ -3,6 +3,7 @@ import Adafruit_GPIO
 from Adafruit_SHT31 import SHT31
 import Adafruit_GPIO.I2C as I2C
 import time
+import sys
 
 sht = SHT31() # Handle to all sensors in the array!
 
@@ -26,4 +27,5 @@ def read_all_temperature_humidity(sht, TCA9548A, N_SHTs):
     return [read_sht(i)   for i in range(N_SHTs)]
 
 while True:
-    print('\t'.join(  [ str(hum)  for temp,hum in read_all_temperature_humidity(sht, TCA9548A, N_SHTs)]  ))
+    print('\t'.join(  [ str(hum)  for temp,hum in read_all_temperature_humidity(sht, TCA9548A, N_SHTs)]  ), end="")
+    sys.stdout.flush()
