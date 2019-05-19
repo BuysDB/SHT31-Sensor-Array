@@ -2,7 +2,7 @@
 import Adafruit_GPIO
 from Adafruit_SHT31 import SHT31
 import Adafruit_GPIO.I2C as I2C
-
+import time
 
 sht = SHT31() # Handle to all sensors in the array!
 
