@@ -1,6 +1,8 @@
 # SHT31 Array
 
 Get 8 temperature and humidity measurements per second from 8 SHT31 sensors.
+<img alt="Example Setup" src="http://buysdb.nl/images/ext/SHT_ARRAY.jpg">
+<img alt="feedgnuplot sht31 array" src="http://buysdb.nl/images/ext/SHT_ARRAY_graph.jpg">
 
 ### Prerequisites
 
