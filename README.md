@@ -1,6 +1,6 @@
 # SHT31 Array
 
-Get 10 temperature and humidity measurements per second from 8 SHT31 sensors.
+Get 8 temperature and humidity measurements per second from 8 SHT31 sensors.
 
 ### Prerequisites
 
