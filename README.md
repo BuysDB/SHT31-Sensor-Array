@@ -8,5 +8,6 @@ The prerequisites are Python 3.6 or higher, my fork of [Adafruit_Python_SHT31](h
 
 ### Installation
 ```
-pip3 install https://github.com/BuysDB/Adafruit_Python_SHT31/archive/master.zip
+
+pip3 install https://github.com/BuysDB/Adafruit_Python_SHT31/archive/master.zip https://github.com/BuysDB/SHT31-Sensor-Array/archive/master.zip
 ```
