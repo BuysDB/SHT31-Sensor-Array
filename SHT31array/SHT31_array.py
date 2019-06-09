@@ -26,26 +26,3 @@ class SHT31_Array():
             self.sht.request_readout()
         time.sleep(0.015) # This could be lower @todo
         return [self.read_sht(i)   for i in range(self.N_SHTs)]
-
-#while True:
-#    print( read_all_temperature_humidity(sht, TCA9548A, N_SHTs) )
-
-
-if __name__=='main':
-    plt.ion()
-    fig, ax = plt.subplots()
-    fig.canvas.draw()
-    plt.show(block=False)
-    dots = ax.scatter(list(range(N_SHTs)), [0]*N_SHTs)
-    d = dots.get_offsets()
-    ax.set_ylim(30, 80)
-    for q in range(10000):
-        for i in range(N_SHTs):
-            select_sht(i)
-            sht.request_readout()
-        #time.sleep(0.015)
-        #fig.canvas.draw()
-        #plt.pause(0.001)
-        d[:,1] = [read_sht(i)[1]   for i in range(N_SHTs)]
-        dots.set_offsets(d)
-        #ax.set_ylim(d[:,1].mean()-2, d[:,1].mean()+2)
