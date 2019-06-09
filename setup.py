@@ -7,6 +7,6 @@ setup(
 	description='Sample from multiple sht31 sensors in real time',
 	url='https://github.com/BuysDB/SHT31-Sensor-Array',
 	py_modules=['SHT31array'],
-	#scripts=['SHT31_array_realtime.py'],
+	scripts=['SHT31array/SHT31_array_realtime.py'],
 	install_requires=['numpy']
 )
